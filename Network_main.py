@@ -55,6 +55,8 @@ class neuralNetwork:
         final_outpus = self.activation_function(final_inputs)
         return final_outpus
 
+    # ceshi
+
     
 
 
