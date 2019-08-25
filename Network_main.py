@@ -18,8 +18,6 @@ class neuralNetwork:
         self.who = np.random.normal(0.0, pow(self.onodes, -0.5), (self.onodes, self.hnodes))
         # 激活函数（使用sigmoid函数来当做激活函数）;
         self.activation_function = lambda x: scipy.special.expit(x)
-        # cehsadfassdfasdfasdfas
-        # dfasdfasdfasdf
 
 
     # 训练方法；
@@ -55,7 +53,9 @@ class neuralNetwork:
         # 隐藏层到输出层,同样加入激活函数；
         final_inputs = np.dot(self.who, hidden_outputs)
         final_outpus = self.activation_function(final_inputs)
-
         return final_outpus
+
+    if __name__ == '__main__':
+        pass
 
 
