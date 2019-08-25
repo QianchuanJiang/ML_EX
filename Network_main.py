@@ -55,10 +55,6 @@ class neuralNetwork:
         final_outpus = self.activation_function(final_inputs)
         return final_outpus
 
-    # 主运行方法；
-    # dasdfa
-    if __name__ == '__main__':
-        pass
     
 
 
