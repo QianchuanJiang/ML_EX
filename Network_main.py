@@ -19,6 +19,7 @@ class neuralNetwork:
         # 激活函数（使用sigmoid函数来当做激活函数）;
         self.activation_function = lambda x: scipy.special.expit(x)
         # github Edit!!
+        # hhhhhhhhhhhhhhhhhhhhhhh
 
 
     # 训练方法；
