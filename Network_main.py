@@ -33,13 +33,17 @@ class neuralNetwork:
         # 隐藏层到输出层
         final_inputs = np.dot(self.who, hidden_outputs)
         final_outputs = self.activation_function(final_inputs)
-        # 计算出误差值，用于反向传播；
+        # 计算出误差值(输出层误差)，用于反向传播；
         output_errors = targets - final_outputs
-        # 根据所连接的权重分割误差，为每个隐藏节点重组这些误差，
+        # 根据所连接的权重分割误差（隐藏层误差），为每个隐藏节点重组这些误差，
         # 公式为：ERRPRS(hidden) = WEIGHTS(hidden_output) • ERRORS(output)
         hidden_errors = np.dot(self.who.T, output_errors)
         # 更新隐藏层和输出层之前权重；
+        # 两层之间权重更新表达式：DELTA_W_jk = lr * Error_k * sigmoid(Output_k) * (1 - sigmid(Output_k)) • Output_j.T
         self.who += self.lr * np.dot((output_errors * final_outputs * (1.0 - final_outputs)), np.transpose(hidden_outputs))
+        # 更新输入层与隐藏层之间权重；
+        self.wih += self.lr * np.dot((hidden_errors * hidden_outputs * (1.0 - hidden_outputs)), np.transpose(inputs))
+        return final_outputs
 
 
     # 查询方法；
