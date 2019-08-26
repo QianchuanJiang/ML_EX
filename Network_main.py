@@ -18,7 +18,7 @@ class neuralNetwork:
         self.who = np.random.normal(0.0, pow(self.onodes, -0.5), (self.onodes, self.hnodes))
         # 激活函数（使用sigmoid函数来当做激活函数）;
         self.activation_function = lambda x: scipy.special.expit(x)
-
+        # 007
 
     # 训练方法；
     def train(self, inputs_list, targets_list):
