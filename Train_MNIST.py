@@ -25,6 +25,7 @@ if __name__ == '__main__':
     hidden_modes = 100
     output_nodes = 10
     learning_rate = 0.1
+    # dsfa
 
     # 实例化神经网络对象；
     n = neuralNetwork(inputnodes=input_nodes, hiddennodes=hidden_modes, outputnodes=output_nodes, learningrate=learning_rate)
