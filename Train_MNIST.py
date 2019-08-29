@@ -44,7 +44,7 @@ if __name__ == '__main__':
         n.train(inputs_list=inputs, targets_list=targers)
 
     # 测试结果
-    pic_values = data_list[2500].split(',')
+    pic_values = data_list[2300].split(',')
     # 截取数据第一位以后的所有数据，并把他们转换成一个28*28的二维数组；
     image_array = np.asfarray(pic_values[1:]).reshape((28, 28))
     plt.imshow(image_array, cmap='Greys', interpolation='None')
