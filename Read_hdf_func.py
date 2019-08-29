@@ -15,6 +15,7 @@ if __name__ == '__main__':
     data = np.transpose(data)
     print(data)
     print(data.shape)
+    # ds
 
 
 
